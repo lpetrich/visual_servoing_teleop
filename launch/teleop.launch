@@ -1,0 +1,16 @@
+<!--
+    Author: Laura Petrich
+    Visual Servoing Interface
+-->
+
+<launch>
+	<group ns="cam1">
+	    <node pkg="usb_cam" type="usb_cam_node" name="camera">
+	        <param name="video_device" value="/dev/video0" />
+	        <param name="framerate" value="15" />
+	    </node>
+    </group>
+
+    <node pkg="visual_servoing_teleop" type="visual_servoing_teleop" name="visual_servoing_teleop" output="screen"/> 
+
+</launch>
